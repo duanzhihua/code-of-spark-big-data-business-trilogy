@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: junit:junit:4.4">
+    <CLASSES>
+      <root url="jar://F:/SparkMaven2017/repository64bit/junit/junit/4.4/junit-4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://F:/SparkMaven2017/repository64bit/junit/junit/4.4/junit-4.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://F:/SparkMaven2017/repository64bit/junit/junit/4.4/junit-4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.spark:spark-mllib-local_2.11:test-jar:tests:2.1.0">
+    <CLASSES>
+      <root url="jar://F:/SparkMaven2017/repository64bit/org/apache/spark/spark-mllib-local_2.11/2.1.0/spark-mllib-local_2.11-2.1.0-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://F:/SparkMaven2017/repository64bit/org/apache/spark/spark-mllib-local_2.11/2.1.0/spark-mllib-local_2.11-2.1.0-test-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://F:/SparkMaven2017/repository64bit/org/apache/spark/spark-mllib-local_2.11/2.1.0/spark-mllib-local_2.11-2.1.0-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

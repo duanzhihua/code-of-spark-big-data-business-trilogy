@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.glassfish.hk2.external:javax.inject:2.4.0-b10">
+    <CLASSES>
+      <root url="jar://F:/SparkMaven2017/repository64bit/org/glassfish/hk2/external/javax.inject/2.4.0-b10/javax.inject-2.4.0-b10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://F:/SparkMaven2017/repository64bit/org/glassfish/hk2/external/javax.inject/2.4.0-b10/javax.inject-2.4.0-b10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://F:/SparkMaven2017/repository64bit/org/glassfish/hk2/external/javax.inject/2.4.0-b10/javax.inject-2.4.0-b10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

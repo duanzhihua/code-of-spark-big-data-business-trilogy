@@ -1,0 +1,5 @@
+2017-01-15 23:04:45,578 [ERROR] [MQBillPaymentBusiness.java] : 382 -- 锟斤拷水锟斤拷:20166666638U026521 MQ锟剿碉拷支锟斤拷业锟斤拷锟绞憋拷锟�: >>>> Payment >>>> [406]锟斤拷锟斤拷
+2017-01-15 23:42:01,515 [ERROR] [MQBillCheckBusiness.java] : 533 -- 锟斤拷水锟斤拷:2043551234W2315U MQ校锟介订锟斤拷业锟斤拷锟绞憋拷锟�: >>>> CheckBill >>>> [109]锟斤拷锟斤拷
+2017-01-15 23:51:39,375 [ERROR] [MQAuthOperateBusiness.java] : 145 -- 鍒癠AM璁よ瘉鐨勬椂闂�: >>>> Auth >>>> [63]锟斤拷锟斤拷
+2017-01-15 23:52:19,672 [DEBUG] [MQQueryInvoiceBusiness.java] : 198 -- 锟斤拷水锟斤拷:579f0f5d779238,queryInvoice response:<soap:Envelope xmlns:soap="http://test.org/soap/envelope/"><soap:Body><ns2:queryInvoiceResponse xmlns:ns2="http://test.com/"><response><head><errCode>00000001</errCode><errDesc>com.common.exception.ApplicationException: 锟剿伙拷锟斤拷锟斤拷锟节伙拷前锟斤拷锟斤拷锟斤拷效状态
+2017-01-15 23:55:15,562 [WARN ] [MQQueryAccountNoBusiness.java] : 178 -- 锟斤拷水锟斤拷:1043,queryAccountNo response:<soap:Envelope xmlns:soap="http://test.org/soap/envelope/"><soap:Body><ns2:queryAccountNoResponse xmlns:ns2="http://test.com/"><response><head><errCode>00000001</errCode><errDesc>java.lang.Exception: 锟借备锟脚讹拷应锟绞猴拷为锟斤拷

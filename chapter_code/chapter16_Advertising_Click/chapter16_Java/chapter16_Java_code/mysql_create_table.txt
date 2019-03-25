@@ -1,0 +1,69 @@
+ adclicked
+ 表的字段：timestamp、ip、userID、adID、province、city、clickedCount
+
+
+CREATE TABLE IF NOT EXISTS adclicked (
+timestamp VARCHAR(255),
+ip VARCHAR(255),
+userID VARCHAR(255),
+adID VARCHAR(255),
+province VARCHAR(255),
+city VARCHAR(255),
+clickedCount int(10) DEFAULT '0' 
+);
+
+
+
+
+
+
+ adclickedtrend
+ 表的字段：date、hour、minute、adID、clickedCount
+
+
+CREATE TABLE IF NOT EXISTS adclickedtrend (
+date VARCHAR(255),
+hour VARCHAR(255),
+minute VARCHAR(255),
+adID VARCHAR(255),
+clickedCount int(10) DEFAULT '0' 
+);
+
+
+
+
+ adprovincetopn
+ 表的字段：timestamp、adID、province、clickedCount
+
+
+CREATE TABLE IF NOT EXISTS adprovincetopn (
+timestamp VARCHAR(255),
+adID VARCHAR(255),
+province VARCHAR(255),
+clickedCount int(10) DEFAULT '0' 
+);
+
+
+
+  表blacklisttable
+  CREATE TABLE IF NOT EXISTS blacklisttable(
+      name VARCHAR(255)  
+      );
+ 
+
+
+
+
+
+
+表adclickedcount
+
+CREATE TABLE IF NOT EXISTS adclickedcount (
+     timestamp VARCHAR(255),
+  
+     adID VARCHAR(255),
+     province VARCHAR(255),
+     city VARCHAR(255),
+     clickedCount int(10) DEFAULT '0' 
+     );
+

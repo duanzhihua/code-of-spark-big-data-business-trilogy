@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <scala.version>2.11.8</scala.version>
+        <scala.version>2.13.8</scala.version>
         <spark.version>2.1.0</spark.version>
         <jedis.version>2.8.2</jedis.version>
         <fastjson.version>1.2.14</fastjson.version>
@@ -77,58 +77,58 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
+            <artifactId>spark-core_2.13</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-launcher_2.11</artifactId>
+            <artifactId>spark-launcher_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-network-shuffle_2.11</artifactId>
+            <artifactId>spark-network-shuffle_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
+            <artifactId>spark-sql_2.13</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_2.11</artifactId>
+            <artifactId>spark-hive_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-catalyst_2.11</artifactId>
+            <artifactId>spark-catalyst_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming-flume-assembly_2.11</artifactId>
+            <artifactId>spark-streaming-flume-assembly_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming-flume_2.11</artifactId>
+            <artifactId>spark-streaming-flume_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming_2.11</artifactId>
+            <artifactId>spark-streaming_2.13</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-graphx_2.11</artifactId>
+            <artifactId>spark-graphx_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.scalanlp</groupId>
-            <artifactId>breeze_2.11</artifactId>
-            <version>0.11.2</version>
+            <artifactId>breeze_2.13</artifactId>
+            <version>0.13.2</version>
             <scope>compile</scope>
             <exclusions>
                 <exclusion>
@@ -149,25 +149,25 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-mllib_2.11</artifactId>
+            <artifactId>spark-mllib_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-mllib-local_2.11</artifactId>
+            <artifactId>spark-mllib-local_2.13</artifactId>
             <version>2.1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-mllib-local_2.11</artifactId>
+            <artifactId>spark-mllib-local_2.13</artifactId>
             <version>2.1.0</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-repl_2.11</artifactId>
+            <artifactId>spark-repl_2.13</artifactId>
             <version>2.1.0</version>
         </dependency>
         <dependency>
@@ -182,7 +182,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming-flume_2.11</artifactId>
+            <artifactId>spark-streaming-flume_2.13</artifactId>
             <version>${spark.version}</version>
         </dependency>
         <dependency>

@@ -1,0 +1,76 @@
+Spark大数据商业实战三部曲 第二版新书目录
+第1篇 内核解密篇
+第1章 电光石火间体验Spark 2．4 开发实战
+1．1 通过RDD实战电影点评系统入门及源码阅读
+1．1．1 Spark核心概念图解
+1．1．2 通过RDD实战电影点评系统案例
+1．2 通过DataFrame和DataSet实战电影点评系统
+1．2．1 通过DataFrame实战电影点评系统案例
+1．2．2 通过DataSet实战电影点评系统案例
+1．3 Spark2．4 源码阅读环境搭建及源码阅读体验
+第2章 Spark 2．4 技术及原理
+2．1 Spark 2．4 综述
+2．1．1 连续应用程序
+2．1．2 新的API
+2．2 Spark 2．4 Core
+2．2．1 第二代Tungsten引擎
+2．2．2 SparkSession
+2．2．3 累加器API
+2．3 Spark 2．4 SQL
+2．3．1 Spark SQL
+2．3．2 DataFrame和Dataset API
+2．3．3 Timed Window
+2．4 Spark 2．4 Streaming
+2．4．1 Structured Streaming
+2．4．2 增量输出模式
+2．5 Spark 2．4 MLlib
+2．5．1 基于DataFrame的Machine Learning API
+2．5．2 R的分布式算法
+2．6 Spark 2．4 GraphX
+第3章 Spark的灵魂：RDD和DataSet
+3．1 为什么说RDD和DataSet是Spark的灵魂
+3．1．1 RDD的定义及五大特性剖析
+3．1．2 DataSet的定义及内部机制剖析
+3．2 RDD弹性特性7个方面解析
+3．3 RDD依赖关系
+3．3．1 窄依赖解析
+3．3．2 宽依赖解析
+3．4 解析Spark中的DAG逻辑视图
+3．4．1 DAG生成的机制
+3．4．2 DAG逻辑视图解析
+3．5 RDD内部的计算机制
+3．5．1 Task解析
+3．5．2 计算过程深度解析
+3．6 SparkRDD容错原理及其四大核心要点解析
+3．6．1 Spark RDD容错原理
+3．6．2 RDD容错的四大核心要点
+3．7 SparkRDD中Runtime流程解析
+3．7．1 Runtime架构图
+3．7．2 生命周期
+3．8 通过WordCount实战解析Spark RDD内部机制
+3．8．1 Spark WordCount动手实践
+3．8．2 解析RDD生成的内部机制
+3．9 基于DataSet的代码如何转化为RDD
+第4章 Spark Driver启动内幕剖析
+4．1 Spark Driver Program剖析
+4．1．1 Spark Driver Program
+4．1．2 SparkContext深度剖析
+4．1．3 SparkContext源码解析
+4．2 DAGScheduler解析
+4．2．1 DAG的定义
+4．2．2 DAG的实例化
+4．2．3 DAGScheduler划分Stage的原理
+4．2．4 DAGScheduler划分Stage的具体算法
+4．2．5 Stage内部Task获取最佳位置的算法
+4．3 TaskScheduler解析
+4．3．1 TaskScheduler原理剖析
+4．3．2 TaskScheduler源码解析
+4．4 SchedulerBackend解析
+4．4．1 SchedulerBackend原理剖析
+4．4．2 SchedulerBackend源码解析
+4．4．3 Spark程序的注册机制
+……
+
+第2篇 商业案例篇
+第3篇 性能调优篇
+第4篇 Spark+AI解密篇

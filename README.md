@@ -1,5 +1,7 @@
 
 Spark 大数据商业实战三部曲：内核解密|商业案例|性能调优 第二版 王家林，段智华著  基于最新的Spark2.4.X版本，分为内核解密篇，商业案例篇，性能调优篇和Spark+AI解密篇，共32章，学习过程中有任何疑问，可加入QQ群418110145，有专业人员答疑解惑。 
+![](https://github.com/duanzhihua/code-of-spark-big-data-business-trilogy/blob/master/SecondEdition/aboutBookSecondEdition.png )
+
 
 王家林，Apache Spark执牛耳者现工作于硅谷的AI实验室，专注于NLP框架超过20本Spark、Al、Android书籍作者Toastmasters International Division Director GRE博士入学考试连续两次满分获得者                                                                                        
 

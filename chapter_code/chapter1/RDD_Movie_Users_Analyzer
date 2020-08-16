@@ -1,0 +1,85 @@
+package cores
+
+import org.apache.spark.SparkConf
+import org.apache.spark.sql.SparkSession
+
+object RDD_Movie_Users_Analyzer {
+  def main(args: Array[String]): Unit = {
+    val conf = new SparkConf().setMaster("local[*]")
+      .setAppName("RDD_Movie_Users_Analyzer")
+
+    /* *Spark2.0引入了SparkSession来封装了SparkContext和SQLContext，并且会在builder的getOrCreate方法中判断是否有符合要求的SparkSession存在，有则使用，没有才会进行创建。**/
+    val spark = SparkSession.builder.config(conf).getOrCreate()
+    //获取SparkSession的SparkContext
+    val sc = spark.sparkContext
+    //把spark程序运行是日志设置为warn级别以方便查看运行结果
+    sc.setLogLevel("warn")
+    var dataPath = "data/moviedata/medium/" //数据存放的目录；
+    //把用到的数据加载进来转换为RDD，此时使用sc.textFile并不会读取文件，而是标记了有这个操作，在遇到Action级别算子时才会正真去读取文件。
+    val usersRDD = sc.textFile(dataPath + "users.dat")
+    val moviesRDD = sc.textFile(dataPath + "movies.dat")
+    val ratingsRDD = sc.textFile(dataPath + "ratings.dat")
+
+    /*具体数据处理的业务逻辑 */
+    println("所有电影中平均得分最高（口碑最好）的电影:")
+    val movieInfo = moviesRDD.map(_.split("::")).map(x => (x(0), x(1))).cache()
+    val ratings = ratingsRDD.map(_.split("::"))
+      .map(x => (x(0), x(1), x(2))).cache()
+
+
+    val moviesAndRatings = ratings.map(x => (x._2, (x._3.toDouble, 1)))
+      .reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2))
+
+    val avgRatings = moviesAndRatings.map(x => (x._1, x._2._1.toDouble / x._2._2))
+
+    avgRatings.join(movieInfo).map(item => (item._2._1, item._2._2))
+      .sortByKey(false).take(10)
+      .foreach(record => println(record._2 + "评分为：" + record._1))
+
+
+    val usersGender = usersRDD.map(_.split("::")).map(x => (x(0), x(1)))
+    val genderRatings = ratings.map(x => (x._1, (x._1, x._2, x._3)))
+      .join(usersGender).cache()
+    genderRatings.take(10).foreach(println)
+
+    val maleFilteredRatings = genderRatings
+      .filter(x => x._2._2.equals("M")).map(x => x._2._1)
+    val femaleFilteredRatings = genderRatings
+      .filter(x => x._2._2.equals("F")).map(x => x._2._1)
+
+    println("所有电影中最受男性喜爱的电影Top10:")
+    maleFilteredRatings.map(x => (x._2, (x._3.toDouble, 1)))
+      .reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2))
+      .map(x => (x._1, x._2._1.toDouble / x._2._2))
+      .join(movieInfo)
+      .map(item => (item._2._1, item._2._2))
+      .sortByKey(false).take(10)
+      .foreach(record => println(record._2 + "评分为：" + record._1))
+
+
+    println("所有电影中最受女性喜爱的电影Top10:")
+    femaleFilteredRatings.map(x => (x._2, (x._3.toDouble, 1)))
+      .reduceByKey((x, y) => (x._1 + y._1, x._2 + y._2))
+      .map(x => (x._1, x._2._1.toDouble / x._2._2)).join(movieInfo)
+      .map(item => (item._2._1, item._2._2)).sortByKey(false).take(10)
+      .foreach(record => println(record._2 + "评分为：" + record._1))
+
+
+    println("对电影评分数据以Timestamp和Rating两个维度进行二次降序排序:")
+    val pairWithSortkey = ratingsRDD.map(line => {
+      val splited = line.split("::")
+      (new SecondarySortKey(splited(3).toDouble, splited(2).toDouble), line)
+    })
+    //直接调用sortByKey，此时会按照之前实现的compare方法进行排序
+    val sorted = pairWithSortkey.sortByKey(false)
+
+    val sortedResult = sorted.map(sortedline => sortedline._2)
+    sortedResult.take(10).foreach(println)
+
+
+    //在最后关闭SparkSession
+    spark.stop
+
+
+  }
+}
